@@ -14,10 +14,11 @@ void main() {
 	A.Sort(21);
 	A.Sort(0);
 
-	//for (A.Reset(); !A.isEnd; A.GoNext) {
-	//	cout << A.GetCurrenValue;
-	//}
-	return;
+	for (A.Reset(); !A.isEnd; A.GoNext) {
+		cout << A.GetCurrenValue;
+	}
+	system("pause");
+	
 }
 
 

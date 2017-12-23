@@ -1,5 +1,5 @@
 #pragma once
-
+#include <iostream>
 
 template <class T>
 struct TLink {
@@ -16,7 +16,7 @@ public:
 	TList() {
 		pFirst = pLast = pCurrent = pPrevious = pStop = NULL;
 		Size = 0;
-		pos = -1;
+		Pos = -1;
 	}
 
 	void InsFirst(T a) {
@@ -29,14 +29,14 @@ public:
 		else {
 			tmp->pNext = pFirst;
 			pFirst = tmp;
-			pos++;
+			Pos++;
 		}
 		Size++;
 	}
 
 	void InsCurrent(T a) {
 		if (pCurrent = pFirst) {
-			insFirst(a);
+			InsFirst(a);
 		}
 		TLink<T> *tmp = new TLink<T>;
 		tmp->value = a;
@@ -128,7 +128,7 @@ public:
 	void Sort(T a) {
 		TList<int> l;
 		if (pFirst == pStop || pFirst->value > a) {
-			insFirst(a); return;
+			InsFirst(a); return;
 		}
 		if (a >= pLast->value) {
 			InsLast(a); return;
